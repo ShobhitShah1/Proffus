@@ -1,8 +1,6 @@
 import { StyleSheet, Text, View, Image, ScrollView, Dimensions, TouchableOpacity, FlatList, LogBox, Button } from 'react-native'
 import Swiper from 'react-native-swiper';
 import React, { useState, useEffect } from 'react'
-import ActionButton from 'react-native-action-button';
-import Icon from 'react-native-vector-icons/Ionicons';
 
 const height = Dimensions.get('window').height;
 const width = Dimensions.get('window').height;
@@ -54,22 +52,22 @@ export default function Home() {
 
     const Featured_Product = [
         {
-            "title": "Joint Care",
+            "title": "Cephalgo",
             "body": "Joint pain can have causes that aren't due to underlying disease. Examples include overuse such as heavy physical activity, lack of use, sprains or strains",
-            "price": "₹2015",
-            "Capsules": "50 Capsules",
+            "price": "₹214.00",
+            "Capsules": "40 Capsules",
         },
         {
-            "title": "Joint Care 3",
+            "title": "Stress Care",
             "body": "Joint pain can have causes that aren't due to underlying disease. Examples include overuse such as heavy physical activity, lack of use, sprains or strains",
-            "price": "₹2015",
-            "Capsules": "50 Capsules",
+            "price": "₹850.00",
+            "Capsules": "40 Capsules",
         },
         {
-            "title": "Joint Care 4",
+            "title": "Rishtpusht lmmuno",
             "body": "Joint pain can have causes that aren't due to underlying disease. Examples include overuse such as heavy physical activity, lack of use, sprains or strains",
-            "price": "₹2015",
-            "Capsules": "50 Capsules",
+            "price": "₹2500.00",
+            "Capsules": "40 Capsules",
         },
     ]
 
@@ -77,7 +75,7 @@ export default function Home() {
         return <View style={styles.ProductView}>
 
             <View style={styles.ImageView}>
-                <Image source={require('../Images/bottle.png')} style={styles.ProductImage} />
+                <Image source={require('../Images/bottle1.png')} style={styles.ProductImage} />
                 <Text style={styles.CapsuleText}>{item.Capsules}</Text>
             </View>
 
@@ -98,29 +96,23 @@ export default function Home() {
 
     const Most_Purchased_Product = [
         {
-            "title": "Joint Care 1st",
+            "title": "Cephalgo",
             "body": "Joint pain can have causes that aren't due to underlying disease. Examples include overuse such as heavy physical activity, lack of use, sprains or strains",
-            "price": "₹2015",
-            "Capsules": "50 Capsules",
+            "price": "₹214.00",
+            "Capsules": "40 Capsules",
         },
         {
-            "title": "Joint Care 2nd",
+            "title": "Stress Care",
             "body": "Joint pain can have causes that aren't due to underlying disease. Examples include overuse such as heavy physical activity, lack of use, sprains or strains",
-            "price": "₹2015",
-            "Capsules": "50 Capsules",
+            "price": "₹850.00",
+            "Capsules": "40 Capsules",
         },
         {
-            "title": "Joint Care 3rd",
+            "title": "Rishtpusht lmmuno",
             "body": "Joint pain can have causes that aren't due to underlying disease. Examples include overuse such as heavy physical activity, lack of use, sprains or strains",
-            "price": "₹2015",
-            "Capsules": "50 Capsules",
+            "price": "₹2500.00",
+            "Capsules": "40 Capsules",
         },
-        {
-            "title": "Joint Care 4th",
-            "body": "Joint pain can have causes that aren't due to underlying disease. Examples include overuse such as heavy physical activity, lack of use, sprains or strains",
-            "price": "₹2015",
-            "Capsules": "50 Capsules",
-        }
     ]
 
     const OnMostPurchased = ({ item }) => {
@@ -374,9 +366,9 @@ export default function Home() {
 
                                 data={[
                                     { images: require('../Images/ajjtak.png') },
-                                    { images: require('../Images/ajjtak.png') },
-                                    { images: require('../Images/ajjtak.png') },
-                                    { images: require('../Images/ajjtak.png') },
+                                    { images: require('../Images/news1.png') },
+                                    { images: require('../Images/news2.png') },
+                                    { images: require('../Images/news3.png') },
                                     { images: require('../Images/ajjtak.png') },
                                     { images: require('../Images/ajjtak.png') },]}
 
@@ -384,7 +376,7 @@ export default function Home() {
                                 renderItem={({ item }) =>
 
                                     <View style={{ width: 100, height: 100, margin: 10, backgroundColor: '#e0ecde', borderRadius: 10, padding: 10, shadowColor: '#dbdbdb', elevation: 5, justifyContent: 'center', alignItems: 'center' }}>
-                                        <Image style={{ width: 35, height: 30, }} source={item.images} />
+                                        <Image style={{ width: 50, height: 35, }} source={item.images} />
                                     </View>
                                 }
                             />
