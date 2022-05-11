@@ -1,6 +1,8 @@
-import { StyleSheet, Text, View, Image, ScrollView, Dimensions, TouchableOpacity, FlatList, LogBox } from 'react-native'
+import { StyleSheet, Text, View, Image, ScrollView, Dimensions, TouchableOpacity, FlatList, LogBox, Button } from 'react-native'
 import Swiper from 'react-native-swiper';
 import React, { useState, useEffect } from 'react'
+import ActionButton from 'react-native-action-button';
+import Icon from 'react-native-vector-icons/Ionicons';
 
 const height = Dimensions.get('window').height;
 const width = Dimensions.get('window').height;
@@ -181,6 +183,7 @@ export default function Home() {
                                 <View style={styles.slide}>
                                     <Image source={require('../Images/Placeholder.jpg')}
                                         style={{
+
                                             height: '100%',
                                             width: '100%',
                                             borderRadius: 20
@@ -396,6 +399,10 @@ export default function Home() {
                 </ScrollView>
             </>
 
+            <TouchableOpacity style={{ position: 'absolute', bottom: 20, right: 20, alignSelf: 'flex-end', backgroundColor: '#2c6975', width: 55, height: 55, borderRadius: 50 * 2, }}>
+                <Image style={{ width: 50, height: 50, alignSelf: 'center', }} source={require('../Images/bag.png')} />
+            </TouchableOpacity>
+
         </View>
     )
 }
@@ -466,7 +473,7 @@ const styles = StyleSheet.create({
         borderTopLeftRadius: 50,
         borderBottomLeftRadius: 50,
         flexDirection: 'row',
-        elevation: 3,
+        elevation: 5,
         shadowOffset: { width: 0, height: 3 },
         shadowOpacity: 0.4,
         shadowRadius: 10,
